@@ -89,7 +89,7 @@ class qa_html_theme extends qa_html_theme_base
             $this->output('<LINK REL="stylesheet" TYPE="text/css" HREF="' . Q_THEME_URL . '/inc/gzip.php' . '"/>');
         else {
             $this->output('<link rel="stylesheet" type="text/css" href="' . Q_THEME_URL . '/css/font.css"/>');
-            $this->output('<link rel="stylesheet" type="text/css" href="' . Q_THEME_URL . '/css/bootstrap.css"/>');
+            $this->output('<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>');
             $this->output('<link rel="stylesheet" type="text/css" href="' . Q_THEME_URL . '/css/main.css"/>');
             $this->output('<link rel="stylesheet" type="text/css" href="' . Q_THEME_URL . '/css/wide.css"/>');
             $this->output('<link rel="stylesheet" type="text/css" href="' . Q_THEME_URL . '/css/responsive.css"/>');
@@ -131,11 +131,11 @@ class qa_html_theme extends qa_html_theme_base
     {
         $this->output('<script> theme_url = "' . Q_THEME_URL . '";</script>');
         qa_html_theme_base::head_script();
-        $this->output('<script type="text/javascript" src="' . Q_THEME_URL . '/js/bootstrap.js"></script>');
+        $this->output('<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>');
         
         $this->output('<script type="text/javascript" src="' . Q_THEME_URL . '/js/jquery.sparkline.min.js"></script>');
         
-        $this->output('<script type="text/javascript" src="' . Q_THEME_URL . '/js/jquery-ui.min.js"></script>');
+        $this->output('<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>');
 
         
         if (($this->template == 'question') && (qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN))
@@ -224,7 +224,7 @@ class qa_html_theme extends qa_html_theme_base
 ?></a>
 					<ul class="category-list-drop dropdown-menu">
 						<?php
-        $this->cs_full_categories_list();
+        $this->cs_full_categories_list(true);
 ?>
 					</ul>
 				</li>

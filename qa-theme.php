@@ -1,6 +1,6 @@
 <?php
 
-	$debug = false;
+	$debug = true;
 
 		
 	/* don't allow this page to be requested directly from browser */	

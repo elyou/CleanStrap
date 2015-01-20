@@ -1588,7 +1588,7 @@ a.feed-link {
     content: "";
     display: block;
     left: 0;
-    margin-top: 6px;
+    top: 6px;
     position: absolute;
 }
 
